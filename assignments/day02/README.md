@@ -615,10 +615,11 @@ You should store all the source files in your repository:
 │   └── package.json
 ├── assignments
 │   ├── day01
-│   │   ├── answers.md
-│   │   └── setup.sh
+│   │   └── answers.md
 │   └── day02
 │       └── answers.md
+├── scripts
+│   └── verify_environment.sh
 └── docker-compose.yml
 ```
 

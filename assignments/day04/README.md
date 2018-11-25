@@ -1,7 +1,3 @@
-# Updates
-
-- Simplify Terraform file.
-
 # Deployment
 
 ## Part 1 - Installing Terraform
@@ -14,29 +10,21 @@ terraform --version
 
 ## Part 2 - Creating AWS Profile
 
-Create a new profile in your aws client, providing your aws Access-Key and Secret-Key.
-
-```bash
-$ aws configure --profile GameProfile
-AWS Access Key ID [None]: ***
-AWS Secret Access Key [None]: ***
-Default region name [None]: eu-west-1
-Default output format [None]: 
-```
+Setup your AWS Client by logging in to AWS Educate and clicking the `Account Details` and
+following the instructions.
 
 ## Part 3 - Creating a Terraform File
 
-Create a file called infrastructure.tf:
+Create a file called `infrastructure.tf`:
 
 ```hcl-terraform
 provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
-  profile                 = "GameProfile"
-  region                  = "eu-west-1"
+  region                  = "us-east-1"
 }
 
 resource "aws_instance" "game_server" {
-  ami           = "ami-0ab7944c6328200be"
+  ami           = "ami-0ac019f4fcb7cb7e6"
   instance_type = "t2.micro"
   tags {
     Name = "GameServer"
@@ -92,7 +80,7 @@ see your newly created instance there.
 
 Before we change the Terraform file to include network configurations, go to your AWS
 Console and create a new Key-Pair file named GameKeyPair, download it and store it at
-`~/.aws/GameKeyPair.pem`. We will configure the instance to be accessable using this
+`~/.aws/GameKeyPair.pem`. We will configure the instance to be accessible using this
 file.
 
 Now update your `infrastructure.tf` file:
@@ -100,8 +88,7 @@ Now update your `infrastructure.tf` file:
 ```hcl-terraform
 provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
-  profile                 = "GameProfile"
-  region                  = "eu-west-1"
+  region                  = "us-east-1"
 }
 
 resource "aws_security_group" "game_security_group" {
@@ -130,7 +117,7 @@ resource "aws_security_group" "game_security_group" {
 }
 
 resource "aws_instance" "game_server" {
-  ami                    = "ami-0ab7944c6328200be"
+  ami                    = "ami-0ac019f4fcb7cb7e6"
   instance_type          = "t2.micro"
   key_name               = "GameKeyPair"
   vpc_security_group_ids = ["${aws_security_group.game_security_group.id}"]
@@ -213,8 +200,7 @@ and `infrastructure.tf`:
 # TODO Comment 2-3 sentences.
 provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
-  profile                 = "GameProfile"
-  region                  = "eu-west-1"
+  region                  = "us-east-1"
 }
 
 # TODO Comment 2-3 sentences.
@@ -245,7 +231,7 @@ resource "aws_security_group" "game_security_group" {
 
 # TODO Comment 2-3 sentences.
 resource "aws_instance" "game_server" {
-  ami                    = "ami-0ab7944c6328200be"
+  ami                    = "ami-0ac019f4fcb7cb7e6"
   instance_type          = "t2.micro"
   key_name               = "GameKeyPair"
   vpc_security_group_ids = ["${aws_security_group.game_security_group.id}"]
@@ -300,6 +286,9 @@ output "public_ip" {
 ```
 (Added files to copy and changes the remote-exec command)
 
+Apply these changes to Terraform, you may have to use `terraform destroy`, because Terraform
+does not take adding a file as reason enough to recreate an instance.
+
 Now we have a fresh instance running and we have copied the `instance_game_api_instance.sh`
 initialization script and the `docker-compose.yml` file over to the instance's home directory.
 
@@ -315,6 +304,12 @@ ssh -o StrictHostKeyChecking=no -i "~/.aws/GameKeyPair.pem" ubuntu@$(terraform o
 ```
 
 To SSH into a machine and run a command on it (in this case `./initialize_game_api_instance.sh`).
+
+Verify that the API is running:
+```bash
+$ curl $(terraform output public_ip):3000/status
+The API is running!
+```
 
 Now create a script `scripts/deploy.sh`:
 1. It should destroy any running Terraform managed instances.
@@ -355,12 +350,12 @@ You should store all the source files in your repository:
 │   └── package.json
 ├── assignments
 │   ├── day01
-│   │   ├── answers.md
-│   │   └── setup.sh
+│   │   └── answers.md
 │   └── day02
 │       └── answers.md
 ├── scripts
 │   ├── initialize_game_api_instance.sh
+│   ├── verify_environment.sh
 │   └── deploy.sh
 ├── docker-compose.yml
 └── infrastructure.tf

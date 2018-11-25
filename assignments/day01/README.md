@@ -19,7 +19,7 @@ Getting to know the Linux operating system
 
 ## Assignment
 
-Create a bash script `verify_environment.sh` that checks required programs/dependencies. 
+Create a bash script `scripts/verify_environment.sh` that checks required programs/dependencies. 
 
 - [ ] Make sure all bash commands are commented.
 - [ ] The script should prompt the user with:
@@ -61,7 +61,8 @@ You should store the answers and setup scripts inside your repository:
 
 ```text
 .
-├── verify_environment.sh
+├── scripts
+│   └── verify_environment.sh
 └── assignments
     └── day01
         └── answers.md
