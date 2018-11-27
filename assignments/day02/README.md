@@ -196,6 +196,7 @@ function getClient() {
     });
 }
 
+setTimeout(() => {
 var client = getClient();
 client.connect((err) => {
     if (err) {
@@ -212,6 +213,7 @@ client.connect((err) => {
         });
     }
 });
+}, 3000);
 ```
 
 `package.json`
