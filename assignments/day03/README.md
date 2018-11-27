@@ -40,8 +40,7 @@ And launch an instance (use defaults if not specified):\
 Select AMI: `Ubuntu Server 18.04 LTS (HVM), SSD Volume Type`\
 Instance Type: `t2.micro`\
 Name Security Group: `MySecurityGroup`\
-Key Pair: `MyKeyPair`\
-Launch instance.
+Launch with Key Pair: `MyKeyPair`
 
 You should now see a new instance in the console, wait until it's state turns
 green.
