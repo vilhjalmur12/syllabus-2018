@@ -499,7 +499,11 @@ From your project directory, start up your application by running\
 `docker-compose up`
 
 `docker-compose` will then pull the images for both services `john/hgop:part2`
-and `postgres`.
+and `postgres` from Docker Hub.\
+NOTE: you need to push your image to Docker Hub before you will see 
+any changes when you run `docker-compose`, it is not enough to change the code
+since `docker-compose` does not know about your source code, it only works on
+your docker images.
 
 Docker-compose will link the itemrepository and postgres containers
 together so that they can connect to each other using the name in the
