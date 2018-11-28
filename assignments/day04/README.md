@@ -152,7 +152,7 @@ one using the above settings.
 
 To get the IP of your new instance you can use:
 ```bash
-terraform output public_up
+terraform output public_ip
 ```
 
 ## Part 5 - Install Dependencies
