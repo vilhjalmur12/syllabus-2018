@@ -13,6 +13,8 @@ terraform --version
 Setup your AWS Client by logging in to AWS Educate and clicking the `Account Details` and
 following the instructions.
 
+<span style="color:red">**IMPORTANT**</span> For some reason an AWS educate session is only 1 hour, so you might need to do this part again if it expires before you finish day 4. None of your automated scripts should take this limitation into account, they can assume that the credentials are valid.
+
 ## Part 3 - Creating a Terraform File
 
 Create a file called `infrastructure.tf`:
