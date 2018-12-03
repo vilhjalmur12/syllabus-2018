@@ -89,6 +89,7 @@ module.exports = () => {
         getCardValue: (game) => {
             // TODO
         },
+        // The cards value + the card value if it exits (integer).
         getTotal: (game) => {
             // TODO
         },
