@@ -122,12 +122,12 @@ const lucky21Constructer = require('./lucky21.js');
 
 test('a new game should have 50 cards left in the deck', () => {
   let game = lucky21Constructer();
-  expect(game.deck.length).toEqual(50);
+  expect(game.state.deck.length).toEqual(50);
 });
 
 test('a new game should have 2 drawn cards', () => {
   let game = lucky21Constructer();
-  expect(game.cards.length).toEqual(2);
+  expect(game.state.cards.length).toEqual(2);
 });
 ```
 
@@ -229,11 +229,11 @@ test('guess21OrUnder should draw the next card', () => {
   let game = lucky21Constructor(deck, dealer);
   
   // Act
-  game.guess21OrUnder(game, dealer);
+  game.guess21OrUnder(game);
   
   // Assert
-  expect(game.cards.length).toEqual(3);
-  expect(game.cards[2]).toEqual('01D');
+  expect(game.state.cards.length).toEqual(3);
+  expect(game.state.cards[2]).toEqual('01D');
 });
 ```
 
