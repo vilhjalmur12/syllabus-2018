@@ -219,7 +219,7 @@ test('guess21OrUnder should draw the next card', () => {
   // Arrange
   let deck = deckConstructor();
   deck = [
-      '10H', '09S', '01D', '05L',
+      '05L', '01D', '09S', '10H', 
   ];
   let dealer = dealerConstructor();
   // Override the shuffle to do nothing.
