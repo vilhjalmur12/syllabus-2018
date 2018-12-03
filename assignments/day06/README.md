@@ -127,7 +127,7 @@ Go to the Jenkins console:
 - Create new credentials:
   - Kind: `SSH Username with private key`
   - Add your username
-  - Set `Private Key Directly` as `sudo cat /var/lib/jenkins/.ssh/id_rsa`
+  - Set `Private Key Directly`
 - Save
 
 ## Part 7 - Build
