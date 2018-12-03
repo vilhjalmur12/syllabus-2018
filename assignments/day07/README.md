@@ -3,7 +3,13 @@
 ## Part 1 - Lucky 21
 
 For the remainder of the course we will be working creating a simple game called
-[Lucky 21](https://itunes.apple.com/us/app/lucky-21/id1100111795?mt=8).
+[Lucky 21](https://itunes.apple.com/us/app/lucky-21/id1100111795).
+
+### Rules
+Some of the rules that are not coverd above:
+- Player starts with 2 cards.
+- The Jack, Queen and King are worth 10 points
+- An Ace is worth 11 points unless that would yield a total higher than 21 then it's value is 1
 
 ## Part 2 - Game Logic
 
