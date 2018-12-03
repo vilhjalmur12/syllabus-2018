@@ -74,6 +74,7 @@ module.exports = () => {
     return {
         state: state,
         // Is the game over (true or false).
+        // Is the game finished.
         isGameOver: (game) => {
             // TODO
         },
