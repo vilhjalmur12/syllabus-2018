@@ -99,6 +99,8 @@ After completing the sign up you should setup Security Credentials
 3. Check `Logged-in users can do anything`
 4. Save
 
+You will also need to setup an SSH key for the jenkins user to access GitHub.
+
 ## Part 6 - Create your first pipeline
 
 You will use a `Jenkinsfile` to define your workflow,
