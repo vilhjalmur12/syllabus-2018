@@ -121,6 +121,7 @@ Do not implement the `TODO`s for now
 **Cards**: An array of string representing the cards the player has guessed are 21 or under.\
 **Card**: A card that the player guessed should go over 21.
 
+#### Example 1
 ![Example 1](https://is5-ssl.mzstatic.com/image/thumb/Purple111/v4/ad/f2/17/adf217d4-cbb7-879a-a920-4f8d9a259a4b/pr_source.png/643x0w.jpg)
 ```json
 {
@@ -136,6 +137,7 @@ getCardsValue => 20\
 getCardValue => 0\
 getTotal => 20
 
+#### Example 2
 ![Example 2](https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/38/f6/4f/38f64f6f-8a77-51de-a775-ce3209cd0ce5/pr_source.png/643x0w.jpg)
 ```json
 {
@@ -151,6 +153,7 @@ getCardsValue => 20\
 getCardValue => 10\
 getTotal => 30
 
+#### Example 3
 ![Example 3](https://is2-ssl.mzstatic.com/image/thumb/Purple122/v4/ea/c4/c2/eac4c234-0eff-0bcb-59b3-286f0a14aa91/pr_source.png/643x0w.jpg)
 ```json
 {
