@@ -119,6 +119,8 @@ node {
 
 Go to the Jenkins console:
 
+- Create SSH credentials for Jenkins to use to connect to GitHub
+
 - Go to `create new project`
 - Pick `pipeline` project (If it is not available you will need to install the
   plugin)
@@ -126,10 +128,7 @@ Go to the Jenkins console:
 - Set `Definition` as `Pipeline script from SCM`
 - As `SCM` choose `Git`
 - Add your repository URL (SSH)
-- Create new credentials:
-  - Kind: `SSH Username with private key`
-  - Add your username
-  - Set `Private Key Directly`
+- Use the SSH credentials
 - Save
 
 ## Part 7 - Build
