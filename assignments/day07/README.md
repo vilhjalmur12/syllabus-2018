@@ -129,7 +129,7 @@ Do not implement the `TODO`s for now
     "cards": [
         "13D", "11D",
     ],
-    "card": undefined
+    "card": null
 }
 ```
 getCardsValue => 20\
@@ -159,7 +159,7 @@ getTotal => 30
     "cards": [
         "03D", "07H", "06D", "05S",
     ],
-    "card": undefined
+    "card": null
 }
 ```
 getCardsValue => 21\
