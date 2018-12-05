@@ -76,6 +76,17 @@ $ node ./node_modules/eslint/bin/eslint.js --init
   ? Would you like to install them now with npm? Yes
 ```
 
+It should create a `.eslintrc.json`, add es6 to the configuration:
+```json
+{
+    "extends": "google",
+    "env": {
+        "es6": true
+    }
+}
+```
+You can modify the settings however you want, but the should enforce a consistent coding standard.
+
 Then create a script inside your `package.json` that runs ESLint on all your javascript files.
 ```bash
 npm run eslint
