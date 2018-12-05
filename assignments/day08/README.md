@@ -149,7 +149,7 @@ You will need to install both Terraform, the AWS client and copy the key to the 
 Create a new free style Jenkins job for the deployment stage, it should contain an `execute shell`
 build step:
 ```bash
-rm -rf repsoitory
+rm -rf repository
 git clone git@github.com:username/repo.git repository
 cd repository
 
