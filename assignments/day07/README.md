@@ -134,7 +134,7 @@ Do not implement the `TODO`s for now
 }
 ```
 getCardsValue => 20\
-getCardValue => 0\
+getCardValue => undefined\
 getTotal => 20
 
 #### Example 2
@@ -166,7 +166,7 @@ getTotal => 30
 }
 ```
 getCardsValue => 21\
-getCardValue => 0\
+getCardValue => undefined\
 getTotal => 21
 
 ## Part 3 - Unit Test Setup
