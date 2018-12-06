@@ -1,5 +1,7 @@
 # Please look the changes made in day 8 for the jenkins deployment job script
 
+# You should add a production flag in your Dockerfile: `RUN npm install --production`
+
 # Week 2 - Assignment
 
 **Turn in your GitHub repository URL into Canvas solo or in pairs (if the Github
