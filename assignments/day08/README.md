@@ -29,7 +29,6 @@ install them beforehand via SSH make sure:
 - git
 - NodeJS
 - terraform
-- yarn
 
 are installed and make sure the Jenkins user has access to them all without requiring
 `sudo` permission.
