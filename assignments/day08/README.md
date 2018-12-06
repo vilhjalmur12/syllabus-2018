@@ -4,12 +4,14 @@ Today we are going to continue working on the Jenkins pipeline we setup in day 6
 After today the game should deploy automatically when we commit to GitHub given
 that each stage finishes successfully.\
 Stages:
-- Commit
-  - Clean
-  - Setup
-  - Lint
-  - Test
-- Deploy
+- Commit (Jenkins Job)
+  - Clean (Jenkinsfile Stage)
+  - Setup (Jenkinsfile Stage)
+  - Lint (Jenkinsfile Stage)
+  - Test (Jenkinsfile Stage)
+  - Build (Jenkinsfile Stage)
+  - Trigger Deploy Job
+- Deploy (Jenkins Job)
 
 **Note**: In the Jenkinsfile, a stage is different than how it is referred to in the
 course. In the course we talk about a `Commit` stage, this is different in the
