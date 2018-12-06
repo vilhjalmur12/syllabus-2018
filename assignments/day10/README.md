@@ -54,6 +54,8 @@ You should store all the source files in your repository:
 They must be placed at these location to get full marks.
 
 Add a `README.md` file, it should include:
- - URL to the instance running the API running on port 3000.
  - URL to the Jenkins instance running on port 8080.
  - Any additional information about the project you want us to take into account.
+
+The Jenkins deploy job should output the ip the game API is running on to the console.\
+We will use this ip to check if the API is running.
