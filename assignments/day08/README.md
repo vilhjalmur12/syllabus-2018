@@ -169,6 +169,7 @@ ssh -o StrictHostKeyChecking=no -i "~/.aws/GameKeyPair.pem" ubuntu@$(terraform o
 
 exit 0
 ```
+The initialization script should no longer start the API.
 
 Now to trigger the `deployment` stage from the `commit` stage we can use the build command and
 sending in the git commit SHA as a parameter.\
