@@ -151,8 +151,8 @@ build step:
 ```bash
 rm -rf repository
 git clone git@github.com:username/repo.git repository
-git checkout $GIT_COMMIT
 cd repository
+git checkout $GIT_COMMIT
 
 # Delete all .tf files from /var/lib/jenkins/terraform/hgop/production
 # Copy all .tf files from repository to /var/lib/jenkins/terraform/hgop/production
