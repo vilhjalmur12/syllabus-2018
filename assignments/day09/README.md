@@ -105,7 +105,7 @@ module.exports = {
 and create a new `app.js`:
 ```javascript
 const context = require('./context.js').newContext();
-const server = context('server');
+const server = context('server')(context);
 server.listen();
 ```
 
@@ -221,7 +221,7 @@ Lets create a simple test `dealer.unit-test.js`:
 function newRandom(randomReturnValues) {
     let i = 0;
     return {
-        random: (min, max) => {
+        randomInt: (min, max) => {
             return randomReturnValues[i++];
         }
     };
