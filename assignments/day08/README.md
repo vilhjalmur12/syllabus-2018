@@ -133,7 +133,7 @@ Give all users permission to read the credentials file.
 
 ### Deployment
 
-Now you can terminate all your instances on AWS since Jenkins will be the one using Terraform
+Now you can terminate all your **game** instances on AWS since Jenkins will be the one using Terraform
 to manage our AWS resources from now on.
 
 Since we do not using any of the commercial solutions that take care of storing and syncing
@@ -151,6 +151,7 @@ build step:
 ```bash
 rm -rf repository
 git clone git@github.com:username/repo.git repository
+git checkout $GIT_COMMIT
 cd repository
 
 # Delete all .tf files from /var/lib/jenkins/terraform/hgop/production
@@ -158,6 +159,7 @@ cd repository
 
 cd /var/lib/jenkins/terraform/hgop/production
 terraform init # In case terraform is not initialized.
+terraform destroy -auto-approve
 terraform apply -auto-approve
 
 echo "Game API running at " + $(terraform output public_ip)
