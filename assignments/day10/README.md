@@ -18,6 +18,7 @@ You should store all the source files in your repository:
 │   ├── server.js
 │   ├── config.js
 │   ├── random.js
+│   ├── random.unit-test.js
 │   ├── deck.js
 │   ├── deck.unit-test.js
 │   ├── dealer.js
