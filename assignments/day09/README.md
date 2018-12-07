@@ -234,7 +234,7 @@ function newRandom(randomReturnValues) {
 test('dealer should should shuffle cards', () => {
     // Arrange
     let dependencies = {
-        'random': newRandom([2, 1]),
+        'random': () => newRandom([2, 1]),
     };
     let newDealer = require('./dealer.js');
     let dealer = newDealer((name) => {
