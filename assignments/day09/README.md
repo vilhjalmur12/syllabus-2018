@@ -490,6 +490,20 @@ module.exports = function(context) {
 You should now be able to start your API using `docker-compose`, and deploy it automatically
 using Jenkins (if you've updated your session credentials in the last hour :neutral_face:).
 
+```javascript
+// Get the board state, the fields are up to you but should not contain
+// sensitive data that the player should not know.
+// This is what is returned by the API when the player GETs /state
+getState: (game) => {
+    return {
+        cards: this.getCards(game),
+        card: this.getCard(game),
+        finished: this.isGameOver(game),
+        # TODO
+    }
+},
+```
+
 You should be able to play the game using `curl` on the API.
 
 ## Handin
