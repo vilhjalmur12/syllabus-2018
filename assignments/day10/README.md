@@ -2,6 +2,22 @@
 
 # You should add a production flag in your Dockerfile: `RUN npm install --production`
 
+# Game won't be playable until you add
+```javascript
+// Get the board state, the fields are up to you but should not contain
+// sensitive data that the player should not know.
+// This is what is returned by the API when the player GETs /state
+getState: (game) => {
+    return {
+        cards: this.getCards(game),
+        card: this.getCard(game),
+        finished: this.isGameOver(game),
+        # TODO
+    }
+},
+```
+to your lucky21 file.
+
 # Week 2 - Assignment
 
 **Turn in your GitHub repository URL into Canvas solo or in pairs (if the Github
