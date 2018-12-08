@@ -1,7 +1,7 @@
 # Solutions
 Here you can see a solution to week 1:\
 [Week 1](https://github.com/hgop/2018-solution)\
-If you are having any trouble with any part of your own solution you can 
+If you are having any trouble with any part of your own solution you can
 use the solution as a reference and/or copy the parts you need.
 
 # Grading
@@ -87,8 +87,8 @@ leiðbeiningar um uppsetningu síðar.
 
 |                        | Mon                                                      | Tue                                                       | Wed                                                                           | Thu                                                   | Fri                                              |
 | ---------------------- | -------------------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------ |
-| **Lecture**            | - Introduction <br> - The Problem of Delivering Software | - Configuration Management<br> - Advanced Version Control | - Build and Deployment Scripting<br> - Deploying and Releasing Applications| - The anatomy of the build pipeline                   | No lecture, Lab day                              |
-| **Reading Assignment** | Chapter 1                                                | Chapter 2, (3), (13), 14                                  | Chapter 6,10,(11)                                                                  | Chapter 5                                      |                                                  |
+| **Lecture**            | - Introduction <br> - The Problem of Delivering Software | - Configuration Management<br> - Advanced Version Control | - Build and Deployment Scripting| - The anatomy of the build pipeline                   | No lecture, Lab day                              |
+| **Reading Assignment** | Chapter 1                                                | Chapter 2, (3), (13), 14                                  | Chapter 6,(11)                                                                  | Chapter 5                                      |                                                  |
 | **Lab exercise**       | [Linux 101](/assignments/day01/README.md)                 | [Docker](/assignments/day02/README.md)                     | [AWS](/assignments/day03/README.md)                                            | [WebSite and Deployment](/assignments/day04/README.md) | [Week 1 assignment](/assignments/day05/README.md) |
 
 ## Week 2
@@ -107,6 +107,6 @@ leiðbeiningar um uppsetningu síðar.
 
 |                        | Mon                                                            | Tue                                                                  | Wed                                               | Thu                               | Fri                                                |
 | ---------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------- | --------------------------------- | -------------------------------------------------- |
-| **Lecture**            | - Managing Data | Monitoring <br> - Manual quality assurance (Sjá) | - Managing Continuous Delivery<br> - Guest lecture on compliance     | Time for students to prepare exam | Exam, 09:00 - 10:30                                |
-| **Reading Assignment** | Chapter 12                                                     | Chapter 11                                                           |Chapter 15                                             |                                   |                                                    |
-| **Lab exercise**       | [ Migrations and Capacity Tests](/assignments/day11/README.md) | [Connect UI](/assignments/day12/README.md)                           | - [Monitoring](/assignments/day13/README.md) <br> |                                   | [Week 3 assignment](A/assignments/day14/README.md) |
+| **Lecture**            | - Deploying and Releasing Applications<br>- Managing Data | Manual quality assurance (Sjá) | - Managing Continuous Delivery<br> - Guest lecture on compliance     | Time for students to prepare exam | Exam, 09:00 - 10:30                                |
+| **Reading Assignment** | Chapter 10, 12                                                     | Chapter 11                                                           |Chapter 15                                             |                                   |                                                    |
+| **Lab exercise**       | [ Acceptance and Capacity Tests. Test results and coverage ](/assignments/day11/README.md) | [Data migrations and Connect UI](/assignments/day12/README.md)                           | - [Monitoring](/assignments/day13/README.md) <br> |                                   | [Week 3 assignment](/assignments/day14/README.md) |
