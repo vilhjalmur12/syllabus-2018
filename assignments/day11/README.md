@@ -5,7 +5,7 @@
 This day has the heaviest workload for the week so do not be discouraged if you can not
 finish it by the end of the day.
 
-Write the answers to each question inside `answers/day11/answers.md`.
+Write the answers to each question inside `assignments/day11/answers.md`.
 
 ## Database
 
@@ -134,7 +134,7 @@ Using the helper library we created for the API but running it multiple times.
 
 `server.capacity-test.js`:
 ```javascript
-const helper = require('./helper.lib-test.js');
+const helper = require('./server.lib-test.js');
 
 const timeout = 30000;
 const gameCount = 10;
