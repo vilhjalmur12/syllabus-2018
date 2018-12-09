@@ -1,7 +1,7 @@
 # Solutions
 Here you can see a solution to week 1:\
-[Week 1](https://github.com/hgop/2018-solution/week1)\
-[Week 2](https://github.com/hgop/2018-solution/week2)\
+[Week 1](https://github.com/hgop/2018-solution/tree/master/week1)\
+[Week 2](https://github.com/hgop/2018-solution/tree/master/week2)\
 If you are having any trouble with any part of your own solution you can
 use the solution as a reference and/or copy the parts you need.
 
