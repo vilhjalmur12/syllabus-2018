@@ -453,7 +453,7 @@ module.exports = function(context) {
                     client.end();
                 } else {
                     const query = {
-                        text: 'INSERT INTO History(Won, Score, Total, InsertedDate) VALUES($1, $2, $3, CURRENT_TIMESTAMP);',
+                        text: 'INSERT INTO GameResult(Won, Score, Total, InsertDate) VALUES($1, $2, $3, CURRENT_TIMESTAMP);',
                         values: [won, score, total],
                     }
                     client.query(query, (err) => {
