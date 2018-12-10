@@ -4,16 +4,16 @@
 
 # Game won't be playable until you add
 ```javascript
-// Get the board state, the fields are up to you but should not contain
-// sensitive data that the player should not know.
-// This is what is returned by the API when the player GETs /state
 getState: (game) => {
-    return {
-        cards: this.getCards(game),
-        card: this.getCard(game),
-        finished: this.isGameOver(game),
-        # TODO
-    }
+  return {
+    cards: game.state.cards,
+    cardsValue: game.getCardsValue(game),
+    card: game.state.card,
+    cardValue: game.getCardValue(game),
+    total: game.getTotal(game),
+    gameOver: game.isGameOver(game),
+    playerWon: game.playerWon(game),
+  };
 },
 ```
 to your lucky21 file.
