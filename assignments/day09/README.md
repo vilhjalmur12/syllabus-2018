@@ -279,8 +279,8 @@ module.exports = function(context) {
 
     let game = undefined;
 
-    // Starts a new game.
-    app.post('/stats', (req, res) => {
+    // Gets game statistics
+    app.get('/stats', (req, res) => {
         database.getTotalNumberOfGames((totalNumberOfGames) => {
             database.getTotalNumberOfWins((totalNumberOfWins) => {
                 database.getTotalNumberOf21((totalNumberOf21) => {
